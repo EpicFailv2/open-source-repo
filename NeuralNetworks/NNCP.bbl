@@ -1,0 +1,321 @@
+\begin{thebibliography}{10}
+
+\bibitem{matlabSegmentationTutorial}
+Image Analyst.
+\newblock Image segmentation tutorial.
+\newblock {\em MATLAB}, 2015.
+
+\bibitem{griffis2016voxel}
+Joseph~C Griffis, Jane~B Allendorfer, and Jerzy~P Szaflarski.
+\newblock {Voxel-based Gaussian na{\"\i}ve Bayes classification of ischemic
+  stroke lesions in individual T1-weighted MRI scans}.
+\newblock {\em Journal of neuroscience methods}, 257:97--108, 2016.
+
+\bibitem{matlabTumor}
+Chandra~Sekhar Ravuri.
+\newblock Automatic segmentation of brain tumor in mr images.
+\newblock {\em MATLAB}, 2015.
+
+\bibitem{matlabTumor2}
+Shazid Mahmood.
+\newblock Brain tumor detection from mri images using anisotropic filter and
+  segmentation image processing.
+\newblock {\em MATLAB}, 2017.
+
+\bibitem{Ashburner2005}
+John Ashburner and Karl~J Friston.
+\newblock Unified segmentation.
+\newblock {\em Neuroimage}, 26(3):839--851, 2005.
+
+\bibitem{Ashton2003}
+Edward~A Ashton, Chihiro Takahashi, Michel~J Berg, Andrew Goodman, Saara
+  Totterman, and Sven Ekholm.
+\newblock Accuracy and reproducibility of manual and semiautomated
+  quantification of {MS} lesions by {MRI}.
+\newblock {\em Journal of Magnetic Resonance Imaging}, 17(3):300--308, 2003.
+
+\bibitem{Bates2003}
+Elizabeth Bates, Stephen~M Wilson, Ayse~Pinar Saygin, Frederic Dick, Martin~I
+  Sereno, Robert~T Knight, and Nina~F Dronkers.
+\newblock Voxel-based lesion--symptom mapping.
+\newblock {\em Nature neuroscience}, 6(5):448--450, 2003.
+
+\bibitem{chen2010voxel}
+Rong Chen and Edward~H Herskovits.
+\newblock Voxel-based {Bayesian} lesion--symptom mapping.
+\newblock {\em Neuroimage}, 49(1):597--602, 2010.
+
+\bibitem{crinion2007spatial}
+Jenny Crinion, John Ashburner, Alex Leff, Matthew Brett, Cathy Price, and Karl
+  Friston.
+\newblock Spatial normalization of lesioned brains: performance evaluation and
+  impact on {fMRI} analyses.
+\newblock {\em Neuroimage}, 37(3):866--875, 2007.
+
+\bibitem{crinion2013neuroimaging}
+Jenny Crinion, Audrey~L Holland, David~A Copland, Cynthia~K Thompson, and
+  Argye~E Hillis.
+\newblock Neuroimaging in aphasia treatment research: quantifying brain lesions
+  after stroke.
+\newblock {\em Neuroimage}, 73:208--214, 2013.
+
+\bibitem{domingos1997optimality}
+Pedro Domingos and Michael Pazzani.
+\newblock On the optimality of the simple {Bayesian} classifier under zero-one
+  loss.
+\newblock {\em Machine learning}, 29(2-3):103--130, 1997.
+
+\bibitem{fiez2000lesion}
+Julie~A Fiez, Hanna Damasio, and Thomas~J Grabowski.
+\newblock Lesion segmentation and manual warping to a reference brain:
+  Intra-and interobserver reliability.
+\newblock {\em Human brain mapping}, 9(4):192--211, 2000.
+
+\bibitem{geva2012comparison}
+Sharon Geva, Jean-Claude Baron, P~Simon Jones, Cathy~J Price, and Elizabeth~A
+  Warburton.
+\newblock {A comparison of VLSM and VBM in a cohort of patients with
+  post-stroke aphasia}.
+\newblock {\em NeuroImage: Clinical}, 1(1):37--47, 2012.
+
+\bibitem{mehta2003evaluation}
+Sonya Mehta, Thomas~J Grabowski, Yogi Trivedi, and Hanna Damasio.
+\newblock Evaluation of voxel-based morphometry for focal lesion detection in
+  individuals.
+\newblock {\em Neuroimage}, 20(3):1438--1454, 2003.
+
+\bibitem{mitra2014lesion}
+Jhimli Mitra, Pierrick Bourgeat, Jurgen Fripp, Soumya Ghose, Stephen Rose,
+  Olivier Salvado, Alan Connelly, Bruce Campbell, Susan Palmer, Gagan Sharma,
+  et~al.
+\newblock Lesion segmentation from multimodal {MRI} using random forest
+  following ischemic stroke.
+\newblock {\em NeuroImage}, 98:324--335, 2014.
+
+\bibitem{raizada2013smoothness}
+Rajeev~DS Raizada and Yune-Sang Lee.
+\newblock {Smoothness without smoothing: why Gaussian naive Bayes is not naive
+  for multi-subject searchlight studies}.
+\newblock {\em PloS one}, 8(7):e69566, 2013.
+
+\bibitem{pereira2009machine}
+Francisco Pereira, Tom Mitchell, and Matthew Botvinick.
+\newblock Machine learning classifiers and {fMRI}: a tutorial overview.
+\newblock {\em Neuroimage}, 45(1):S199--S209, 2009.
+
+\bibitem{ripolles2012analysis}
+P~Ripolles, Josep Marco-Pallar{\'e}s, Ruth de~Diego-Balaguer, J~Miro, M~Falip,
+  M~Juncadella, F~Rubio, and Antoni Rodriguez-Fornells.
+\newblock Analysis of automated methods for spatial normalization of lesioned
+  brains.
+\newblock {\em Neuroimage}, 60(2):1296--1306, 2012.
+
+\bibitem{rish2001analysis}
+Irina Rish, Joseph Hellerstein, and Jayram Thathachar.
+\newblock An analysis of data characteristics that affect naive bayes
+  performance.
+\newblock {\em IBM TJ Watson Research Center}, 30, 2001.
+
+\bibitem{rorden2009evaluation}
+Chris Rorden, Julius Fridriksson, and Hans-Otto Karnath.
+\newblock An evaluation of traditional and novel tools for lesion behavior
+  mapping.
+\newblock {\em Neuroimage}, 44(4):1355--1362, 2009.
+
+\bibitem{rorden2007improving}
+Chris Rorden, Hans-Otto Karnath, and Leonardo Bonilha.
+\newblock Improving lesion-symptom mapping.
+\newblock {\em Journal of cognitive neuroscience}, 19(7):1081--1088, 2007.
+
+\bibitem{seghier2008lesion}
+Mohamed~L Seghier, Anil Ramlackhansingh, Jenny Crinion, Alexander~P Leff, and
+  Cathy~J Price.
+\newblock Lesion identification using unified segmentation-normalisation models
+  and fuzzy clustering.
+\newblock {\em Neuroimage}, 41(4):1253--1266, 2008.
+
+\bibitem{wilke2011manual}
+Marko Wilke, Bianca de~Haan, Hendrik Juenger, and Hans-Otto Karnath.
+\newblock Manual, semi-automated, and automated delineation of chronic brain
+  lesions: a comparison of methods.
+\newblock {\em Neuroimage}, 56(4):2038--2046, 2011.
+
+\bibitem{zijdenbos1993brain}
+Alex~P Zijdenbos and Benoit~M Dawant.
+\newblock Brain segmentation and white matter lesion detection in {MR} images.
+\newblock {\em Critical reviews in biomedical engineering}, 22(5-6):401--465,
+  1993.
+
+\bibitem{alfano2000automated}
+Bruno Alfano, Arturo Brunetti, Michele Larobina, Mario Quarantelli, Enrico
+  Tedeschi, Andrea Ciarmiello, Eugenio~M Covelli, and Marco Salvatore.
+\newblock {Automated segmentation and measurement of global white matter lesion
+  volume in patients with multiple sclerosis}.
+\newblock {\em Journal of Magnetic Resonance Imaging}, 12(6):799--807, 2000.
+
+\bibitem{ballester2000segmentation}
+Miguel Angel~Gonzalez Ballester, Andrew Zisserman, and Michael Brady.
+\newblock Segmentation and measurement of brain structures in {MRI} including
+  confidence bounds.
+\newblock {\em Medical Image Analysis}, 4(3):189--200, 2000.
+
+\bibitem{van2001automated}
+Koen Van~Leemput, Frederik Maes, Dirk Vandermeulen, Alan Colchester, and Paul
+  Suetens.
+\newblock Automated segmentation of multiple sclerosis lesions by model outlier
+  detection.
+\newblock {\em IEEE transactions on medical imaging}, 20(8):677--688, 2001.
+
+\bibitem{kwan1999mri}
+RK-S Kwan, Alan~C Evans, and G~Bruce Pike.
+\newblock {MRI} simulation-based evaluation of image-processing and
+  classification methods.
+\newblock {\em IEEE transactions on medical imaging}, 18(11):1085--1097, 1999.
+
+\bibitem{kwan1996extensible}
+Remi K-S Kwan, Alan~C Evans, and G~Bruce Pike.
+\newblock An extensible {MRI} simulator for post-processing evaluation.
+\newblock In {\em Visualization in biomedical computing}, pages 135--140.
+  Springer, 1996.
+
+\bibitem{ashton2001automated}
+Edward Ashton, Saara Totterman, Chihiro Takahashi, Jose Tamez-Pena, and Kevin~J
+  Parker.
+\newblock Automated measurement of structures on {CT} and {MR} imagery: A
+  validation study.
+\newblock In {\em Proceedings of the Fourteenth IEEE Symposium on
+  Computer-Based Medical Systems}, page 300. IEEE Computer Society, 2001.
+
+\bibitem{ashton1997novel}
+Edward~A Ashton, Kevin~J Parker, Michel~J Berg, and Chang~Wen Chen.
+\newblock A novel volumetric feature extraction technique with applications to
+  {MR} images.
+\newblock {\em IEEE transactions on medical imaging}, 16(4):365--371, 1997.
+
+\bibitem{taylor1994image}
+David~C Taylor and William~A Barrett.
+\newblock Image segmentation using globally optimal growth in three dimensions
+  with an adaptive feature set.
+\newblock In {\em Visualization in Biomedical Computing 1994}, pages 98--107.
+  International Society for Optics and Photonics, 1994.
+
+\bibitem{pustina2016automated}
+Dorian Pustina, H~Coslett, Peter~E Turkeltaub, Nicholas Tustison, Myrna~F
+  Schwartz, and Brian Avants.
+\newblock Automated segmentation of chronic stroke lesions using {LINDA}:
+  lesion identification with neighborhood data analysis.
+\newblock {\em Human brain mapping}, 2016.
+
+\bibitem{de2015fast}
+Bianca de~Haan, Philipp Clas, Hendrik Juenger, Marko Wilke, and Hans-Otto
+  Karnath.
+\newblock Fast semi-automated lesion demarcation in stroke.
+\newblock {\em NeuroImage: Clinical}, 9:69--74, 2015.
+
+\bibitem{li2015local}
+Xin-Wei Li, Qiong-Ling Li, Shu-Yu Li, and De-Yu Li.
+\newblock Local manifold learning for multiatlas segmentation: application to
+  hippocampal segmentation in healthy population and alzheimer's disease.
+\newblock {\em CNS Neuroscience \& Therapeutics}, 21(10):826--836, 2015.
+
+\bibitem{harmouche2015probabilistic}
+Rola Harmouche, Nagesh~K Subbanna, D~Louis Collins, Douglas~L Arnold, and Tal
+  Arbel.
+\newblock Probabilistic multiple sclerosis lesion classification based on
+  modeling regional intensity variability and local neighborhood information.
+\newblock {\em IEEE Transactions on Biomedical Engineering}, 62(5):1281--1292,
+  2015.
+
+\bibitem{petoe2014template}
+Matthew~A Petoe, Winston~D Byblow, Esther~JM de~Vries, Venkatesh Krishnamurthy,
+  Cathy~S Zhong, P~Alan Barber, and Cathy~M Stinear.
+\newblock A template-based procedure for determining white matter integrity in
+  the internal capsule early after stroke.
+\newblock {\em NeuroImage: Clinical}, 4:695--700, 2014.
+
+\bibitem{gillebert2014automated}
+Celine~R Gillebert, Glyn~W Humphreys, and Dante Mantini.
+\newblock Automated delineation of stroke lesions using brain {CT} images.
+\newblock {\em NeuroImage: Clinical}, 4:540--548, 2014.
+
+\bibitem{elliott2013temporally}
+Colm Elliott, Douglas~L Arnold, D~Louis Collins, and Tal Arbel.
+\newblock Temporally consistent probabilistic detection of new multiple
+  sclerosis lesions in brain mri.
+\newblock {\em IEEE Transactions On medical imaging}, 32(8):1490--1503, 2013.
+
+\bibitem{llado2012automated}
+Xavier Llad{\'o}, Onur Ganiler, Arnau Oliver, Robert Mart{\'\i}, Jordi
+  Freixenet, Laia Valls, Joan~C Vilanova, Llu{\'\i}s Rami{\'o}-Torrent{\`a},
+  and {\`A}lex Rovira.
+\newblock Automated detection of multiple sclerosis lesions in serial brain
+  {MRI}.
+\newblock {\em Neuroradiology}, 54(8):787--807, 2012.
+
+\bibitem{renz2011accuracy}
+Diane~M Renz, Horst~K Hahn, Peter Schmidt, Jan Rexilius, Markus Lentschig,
+  Alexander Pfeil, Dieter Sauner, Clemens Fitzek, Hans-Joachim Mentzel,
+  Werner~A Kaiser, et~al.
+\newblock Accuracy and reproducibility of a novel semi-automatic segmentation
+  technique for {MR} volumetry of the pituitary gland.
+\newblock {\em Neuroradiology}, 53(4):233--244, 2011.
+
+\bibitem{chen2008voxelwise}
+Rong Chen, Argye~E Hillis, Mikolaj Pawlak, and Edward~H Herskovits.
+\newblock Voxelwise {Bayesian} lesion-deficit analysis.
+\newblock {\em NeuroImage}, 40(4):1633--1642, 2008.
+
+\bibitem{maier2015extra}
+Oskar Maier, Matthias Wilms, Janina von~der Gablentz, Ulrike~M Kr{\"a}mer,
+  Thomas~F M{\"u}nte, and Heinz Handels.
+\newblock Extra tree forests for sub-acute ischemic stroke lesion segmentation
+  in {MR} sequences.
+\newblock {\em Journal of neuroscience methods}, 240:89--100, 2015.
+
+\bibitem{collins1995automatic}
+DL~Collins, AC~Evans, C~Holmes, and TM~Peters.
+\newblock {Automatic 3D segmentation of neuro-anatomical structures from MRI}.
+\newblock In {\em Information processing in medical imaging}, volume~3, pages
+  139--152. Kluwer Dordrecht, 1995.
+
+\bibitem{griffisSrcDLweb}
+Joseph~C. Griffis.
+\newblock {lesion gnb toolbox for SPM12}.
+\newblock Online, March 2016.
+\newblock Accessed November 2016.
+
+\bibitem{spm12DL}
+By~members \& collaborators of the Wellcome Trust Centre~for Neuroimaging.
+\newblock {Statistical Parametric Mapping - SPM}.
+\newblock Online.
+\newblock Accessed November 2016 at: www.fil.ion.ucl.ac.uk/spm/software/.
+
+\bibitem{macdonald2000automated}
+David MacDonald, Noor Kabani, David Avis, and Alan~C Evans.
+\newblock {Automated 3-D extraction of inner and outer surfaces of cerebral
+  cortex from MRI}.
+\newblock {\em NeuroImage}, 12(3):340--356, 2000.
+
+\bibitem{pitiot2004expert}
+Alain Pitiot, Herv{\'e} Delingette, Paul~M Thompson, and Nicholas Ayache.
+\newblock Expert knowledge-guided segmentation system for brain {MRI}.
+\newblock {\em NeuroImage}, 23:S85--S96, 2004.
+
+\bibitem{ashburner1999nonlinear}
+John Ashburner, Karl~J Friston, et~al.
+\newblock Nonlinear spatial normalization using basis functions.
+\newblock {\em Human brain mapping}, 7(4):254--266, 1999.
+
+\bibitem{shattuck2001magnetic}
+David~W Shattuck, Stephanie~R Sandor-Leahy, Kirt~A Schaper, David~A Rottenberg,
+  and Richard~M Leahy.
+\newblock Magnetic resonance image tissue classification using a partial volume
+  model.
+\newblock {\em NeuroImage}, 13(5):856--876, 2001.
+
+\bibitem{dice1945measures}
+Lee~R Dice.
+\newblock Measures of the amount of ecologic association between species.
+\newblock {\em Ecology}, 26(3):297--302, 1945.
+
+\end{thebibliography}
