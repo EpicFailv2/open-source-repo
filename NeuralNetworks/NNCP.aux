@@ -1,37 +1,131 @@
 \relax 
-\citation{matlabSegmentationTutorial}
+\citation{griffis2016voxel,ashton1997novel,de2015fast,li2015local,harmouche2015probabilistic,petoe2014template,gillebert2014automated,elliott2013temporally,llado2012automated,renz2011accuracy,chen2008voxelwise}
+\citation{griffis2016voxel}
+\citation{griffisSrcDLweb}
+\citation{spm12DL}
+\citation{zijdenbos1993brain,alfano2000automated,ballester2000segmentation,van2001automated,kwan1996extensible,kwan1999mri,taylor1994image}
+\citation{domingos1997optimality,raizada2013smoothness,rish2001analysis}
+\citation{collins1995automatic,crinion2007spatial,ripolles2012analysis}
+\citation{macdonald2000automated,pitiot2004expert,ashton2001automated}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \newlabel{sec:intro}{{1}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Potential MATLAB algorithms}{1}}
-\newlabel{sec:poMaAl}{{2}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Image Segmentation tutorial}{1}}
-\newlabel{ssec:imSegTut}{{2.1}{1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Results shown by the algorithm\relax }}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Analysis of existing volumetric delineation algorithm}{1}}
+\newlabel{sec:griffisLesion}{{2}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Unified segmentation}{1}}
+\newlabel{ssec:unifiedSeg}{{2.1}{1}}
+\citation{ashburner1999nonlinear}
+\citation{Ashburner2005}
+\citation{shattuck2001magnetic}
+\newlabel{eq:bias1}{{1}{2}}
+\newlabel{eq:bias2}{{2}{2}}
+\newlabel{eq:biasLog}{{3}{2}}
+\newlabel{eq:bias3}{{4}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Research results obtained using unified segmentation: patient MRI scan slice (A), gray matter TPM (B), white matter TPM (C) and CSF TPM (D)\relax }}{3}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:coinsThresholdedSegmentation}{{1}{1}}
-\citation{matlabTumor}
-\citation{matlabTumor2}
-\citation{matlabTumor}
-\citation{matlabTumor}
-\citation{matlabTumor2}
-\citation{matlabTumor2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Tumor detectors}{2}}
-\newlabel{ssec:tumors}{{2.2}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Older tumor detection algorithm\cite  {matlabTumor} results for lesion detection.\relax }}{2}}
-\newlabel{fig:tumor1}{{2}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Newer tumor detection algorithm\cite  {matlabTumor2} results for lesion detection.\relax }}{3}}
-\newlabel{fig:tumor2}{{3}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Feature extraction for neural network}{3}}
-\newlabel{sec:featnn}{{3}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces My feature extraction/segmentation results.\relax }}{4}}
-\newlabel{fig:matalbNumbers}{{4}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces My feature extraction/segmentation results.\relax }}{4}}
-\newlabel{fig:meh}{{5}{4}}
+\newlabel{fig:segm}{{1}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Generation of lesion probability map}{3}}
+\newlabel{ssec:lesionGen}{{2.2}{3}}
+\citation{seghier2008lesion,wilke2011manual}
 \citation{griffis2016voxel}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces How far I've got.\relax }}{5}}
-\newlabel{fig:fuckItImOut}{{6}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusions}{5}}
-\newlabel{sec:conclusions}{{4}{5}}
+\citation{mehta2003evaluation}
+\newlabel{eq:f1diffEq1}{{5}{4}}
+\newlabel{eq:f1diffEq2}{{6}{4}}
+\newlabel{eq:f2diffEq1}{{7}{4}}
+\citation{pereira2009machine}
+\citation{griffis2016voxel}
+\citation{griffis2016voxel}
+\newlabel{eq:f2diffEq2}{{8}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Patient MRI scan slice (A), with missing tissue map overlaid (B) and abnormal tissue map overlaid(C)\relax }}{5}}
+\newlabel{fig:f1f2brain}{{2}{5}}
+\citation{dice1945measures}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Griffis lesion delineation algorithm results: depiction of hand drawn lesion area (A), lesion area pre post-processing (B), lesion area after post-processing (C)\relax }}{6}}
+\newlabel{fig:shitylesions}{{3}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Default results, algorithm improvement and comparison between them}{6}}
+\newlabel{ssec:griffisResults}{{2.3}{6}}
+\newlabel{eq:dsc}{{9}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Best attained per slice DSC results after running algorithm for 49 patients.\relax }}{7}}
+\newlabel{fig:bestDefaultDSC}{{4}{7}}
+\citation{griffis2016voxel}
+\citation{griffis2016voxel}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Worst attained per slice DSC results after running algorithm for 49 patients.\relax }}{8}}
+\newlabel{fig:worstDefaultDSC}{{5}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces DSC plots showing results of lesion delineation for patient P0743.\relax }}{9}}
+\newlabel{fig:defaultDSC0743}{{6}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces DSC plots showing results of lesion delineation for patient P1712.\relax }}{9}}
+\newlabel{fig:defaultDSC1712}{{7}{9}}
+\citation{Ashburner2005}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Manual delineation (A) comparison with result of automatic delineation (B) for patient P1712.\relax }}{10}}
+\newlabel{fig:tooMuchDelineated}{{8}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Patient P0836 MRI scan (A) manual delineation (B) comparison with result of automatic delineation (D). Also showing found missing tissue TPM (C).\relax }}{10}}
+\newlabel{fig:0836defaultDelineation}{{9}{10}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces \texttt  {et\_lesion.m} vs \texttt  {lesion\_gnb.m} execution times and results size comparison.\relax }}{11}}
+\newlabel{tbl:speeds}{{1}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces FWHM impact on DSC testing results for three patients; (a) - "good" lesion delineation, (b) - erroneous lesion delineation, (c) - completely failed lesion delineation.\relax }}{13}}
+\newlabel{fig:fwhms}{{10}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {P1857}}}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {P1712}}}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {P0836}}}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Most obvious slice of segmentations for patient P0836 MRI scan with emphasis on lesion area: gray matter TPM with manually delimited lesion area overlaid (A), white matter (B), CSF (C)\relax }}{13}}
+\newlabel{fig:shittysegment}{{11}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Prior probability coefficient impact on DSC testing results for three patients.\relax }}{14}}
+\newlabel{fig:priors}{{12}{14}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {P1857}}}{14}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {P1712}}}{14}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {P0836}}}{14}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {P1419}}}{14}}
+\citation{griffis2016voxel}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Thresholding point impact on DSC testing results for two patients from before.\relax }}{16}}
+\newlabel{fig:cutoffs}{{13}{16}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {P1857}}}{16}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {P1712}}}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Curves of 24 patients full lesion delineation DSC dependence on thresholding point.\relax }}{16}}
+\newlabel{fig:ctfcurves}{{14}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Curve of averages of curves in figure 14\hbox {}.\relax }}{17}}
+\newlabel{fig:ctfsum}{{15}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces DSC graphs for patient P1476 obtained running \texttt  {lesion\_gnb.m} (a) and \texttt  {et\_lesion.m} (b).\relax }}{17}}
+\newlabel{fig:etvsgnb1476}{{16}{17}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{17}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{17}}
+\citation{griffis2016voxel}
+\citation{matlabSegmentationTutorial}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces DSC graphs for patient P0053 obtained running \texttt  {lesion\_gnb.m} (a) and \texttt  {et\_lesion.m} (b).\relax }}{18}}
+\newlabel{fig:etvsgnb0053}{{17}{18}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{18}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Algorithms attempting segmentation in 2D images}{18}}
+\newlabel{sec:poMaAl}{{3}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Image Segmentation tutorial}{18}}
+\newlabel{ssec:imSegTut}{{3.1}{18}}
+\citation{matlabTumor}
+\citation{matlabTumor2}
+\citation{matlabTumor}
+\citation{matlabTumor}
+\citation{matlabTumor2}
+\citation{matlabTumor2}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Results shown by the algorithm\relax }}{19}}
+\newlabel{fig:coinsThresholdedSegmentation}{{18}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Tumor detectors}{19}}
+\newlabel{ssec:tumors}{{3.2}{19}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Feature extraction for neural network}{19}}
+\newlabel{sec:featnn}{{4}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Older tumor detection algorithm\cite  {matlabTumor} results for lesion detection.\relax }}{20}}
+\newlabel{fig:tumor1}{{19}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Newer tumor detection algorithm\cite  {matlabTumor2} results for lesion detection.\relax }}{20}}
+\newlabel{fig:tumor2}{{20}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces My feature extraction/segmentation results.\relax }}{21}}
+\newlabel{fig:matalbNumbers}{{21}{21}}
+\citation{griffis2016voxel}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces My feature extraction/segmentation results.\relax }}{22}}
+\newlabel{fig:meh}{{22}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{22}}
+\newlabel{sec:conclusions}{{5}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Source Codes}{24}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/NNCP\textunderscore ET\textunderscore NN.m}{24}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/nifti2slices.m}{26}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/NNCP\textunderscore ImageCycling.m}{28}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/NNCP\textunderscore Image\textunderscore Segmentation\textunderscore edgetech.m}{29}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/et\textunderscore dsc.m}{33}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/et\textunderscore lesion.m}{35}}
 \citation{*}
 \bibstyle{unsrt}
 \bibdata{References}
@@ -50,7 +144,7 @@
 \bibcite{geva2012comparison}{{13}{}{{}}{{}}}
 \bibcite{mehta2003evaluation}{{14}{}{{}}{{}}}
 \bibcite{mitra2014lesion}{{15}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{References}{7}}
+\@writefile{toc}{\contentsline {section}{References}{44}}
 \bibcite{raizada2013smoothness}{{16}{}{{}}{{}}}
 \bibcite{pereira2009machine}{{17}{}{{}}{{}}}
 \bibcite{ripolles2012analysis}{{18}{}{{}}{{}}}

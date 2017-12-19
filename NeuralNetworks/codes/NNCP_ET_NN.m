@@ -78,10 +78,6 @@ for i = 1:rows
     expFeat(i,:) = expFeat(i,:)./max(expFeat(i,:));
 end
 
-
-
-
-
 % hand picked lessioned slices a.k.a. expected results
 % sample 1
 ss  = 122;
@@ -121,15 +117,6 @@ es  = 186;
 s6 = cat(ss,lss,les,es);
 
 goals = [s1 s2 s3 s4 s5 s6];
-
-
-
-
-
-
-
-
-
 
 fprintf(1,'NNCP_ET_NN time: %3.2f\n',toc(start));
 
