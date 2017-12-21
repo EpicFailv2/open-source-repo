@@ -66,11 +66,11 @@ void main() {
     
     // following is playing around
     col++;
-    if (col > 16) {
+    if (col > 14) {
       row++;
       col = 1;
     }
-    if (row > 2) {
+    if (row > 6) {
       row = 1;
     }
   }

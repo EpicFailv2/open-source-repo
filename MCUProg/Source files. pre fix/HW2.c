@@ -46,8 +46,8 @@ void main() {
   // LCD setup
   Lcd_Init();
   Lcd_Cmd(_LCD_CLEAR);
-  Lcd_Out(1,9,"y = ");
-  Lcd_Out(2,1,"x+y = ");
+  Lcd_Out(2,1,"y = ");
+  Lcd_Out(3,1,"x+y = ");
   Lcd_Out(1,1,"x = ");
   
   while (1) {
@@ -98,9 +98,7 @@ void main() {
       case 3: // calculation stage
         LCD_sum_reset();
         LCD_move_cursor();
-        val = x+y;
-        WordToStr(val, txt);
-        //Lcd_Out(2,1,"x+y =");
+        WordToStr(x + y, txt);
         Lcd_Out_CP(txt);
         x = 0;
         y = 0;
@@ -115,16 +113,16 @@ void main() {
 void LCD_move_cursor(){
   switch (stage) {
     case 1: Lcd_Chr(1,4,32); break;
-    case 2: Lcd_Chr(1,12,32); break;
-    case 3: Lcd_Chr(2,6,32); break;
+    case 2: Lcd_Chr(2,4,32); break;
+    case 3: Lcd_Chr(3,6,32); break;
   }
 }
 
 void LCD_inputs_reset(){
-  Lcd_Out(1,1,"x =     ");
-  Lcd_Out(1,9,"y =     ");
+  Lcd_Out(1,4,"     ");
+  Lcd_Out(2,4,"     ");
 }
 
 void LCD_sum_reset(){
-  Lcd_Out(2,1,"x+y =    ");
+  Lcd_Out(3,6,"     ");
 }
