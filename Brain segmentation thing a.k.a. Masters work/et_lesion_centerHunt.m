@@ -1,4 +1,4 @@
-function ratios = et_lesion_centerHunt()
+function et_lesion_centerHunt()
 % ET_LESION - automatic lesion detector
 %
 %   TBA
@@ -21,11 +21,14 @@ times = [];
 segTimes = [];
 srcNii = dir([srcNiiDir '\*.nii']); % poll for .nii files 
 fullTime = tic;
-ratios = {};
+o = zeros(1,12);
+routs = o;
 outputStr = '';
 outputStr = [outputStr 'Lesion center determination testing system' '\n'];
+outputStr = [outputStr '  mmmx - point of maximum difference a.k.a. max(max(max(f1nii.img))) coordinates' '\n'];
 outputStr = [outputStr '  GTC - geometric thresholded center' '\n'];
-outputStr = [outputStr '  GWTC - geometric wwighted thresholded center' '\n'];
+outputStr = [outputStr '  GWTC - geometric weighted thresholded center' '\n'];
+outputStr = [outputStr '  GWATC - geometric weighted adaptive thresholded center' '\n'];
 
 
 for i = 1:length(srcNii)
@@ -160,25 +163,45 @@ for i = 1:length(srcNii)
     mxz = floor(mean(mxz));
     mxc = [mxx, mxy, mxz]; % found lesion center point
     
-%     gtc5 = GTC(nf1nii.img,.5);
-%     gtc3 = GTC(nf1nii.img,.3);
-%     gtc1 = GTC(nf1nii.img,.1);
+    gtc5 = GTC(nf1nii.img,.5);
+    gtc3 = GTC(nf1nii.img,.3);
+    gtc1 = GTC(nf1nii.img,.1);
     gtc5w = GWTC(nf1nii.img,.5);
     gtc3w = GWTC(nf1nii.img,.3);
     gtc1w = GWTC(nf1nii.img,.1);
     gtc0w = GWTC(nf1nii.img,0);
+    gtac75 = GWATC(nf1nii.img,75);
+    gtac50 = GWATC(nf1nii.img,50);
+    gtac25 = GWATC(nf1nii.img,25);
     
     onii = load_nii(fullfile(workDir,[fname fext]));
     lnii = load_nii(fullfile(labelsDir, ['l' fname fext]));
     
-    outputStr = [outputStr '  mmmx center coordinate:      ' ns(mxc(1)) ' ' ns(mxc(2)) ' ' ns(mxc(3)) ' ' hitCheck(lnii.img, mxc) '\n'];
-%     outputStr = [outputStr '  GTC  >.5 coordinate:         ' ns(gtc5(1)) ' ' ns(gtc5(2)) ' ' ns(gtc5(3)) ' ' hitCheck(lnii.img, gtc5) '\n'];
-%     outputStr = [outputStr '  GWTC >.5 coordinate:         ' ns(gtc5w(1)) ' ' ns(gtc5w(2)) ' ' ns(gtc5w(3)) ' ' hitCheck(lnii.img, gtc5w) '\n'];
-%     outputStr = [outputStr '  GTC  >.3 coordinate:         ' ns(gtc3(1)) ' ' ns(gtc3(2)) ' ' ns(gtc3(3)) ' ' hitCheck(lnii.img, gtc3) '\n'];
-%     outputStr = [outputStr '  GWTC >.3 coordinate:         ' ns(gtc3w(1)) ' ' ns(gtc3w(2)) ' ' ns(gtc3w(3)) ' ' hitCheck(lnii.img, gtc3w) '\n'];
-%     outputStr = [outputStr '  GTC  >.1 coordinate:         ' ns(gtc1(1)) ' ' ns(gtc1(2)) ' ' ns(gtc1(3)) ' ' hitCheck(lnii.img, gtc1) '\n'];
-%     outputStr = [outputStr '  GWTC >.1 coordinate:         ' ns(gtc1w(1)) ' ' ns(gtc1w(2)) ' ' ns(gtc1w(3)) ' ' hitCheck(lnii.img, gtc1w) '\n'];
-%     outputStr = [outputStr '  GWTC >0 coordinate:          ' ns(gtc0w(1)) ' ' ns(gtc0w(2)) ' ' ns(gtc0w(3)) ' ' hitCheck(lnii.img, gtc0w) '\n'];
+    
+    [htc, routs(1)] = hitCheck(lnii.img, mxc);
+    outputStr = [outputStr '  mmmx center coordinate:      ' ns(mxc(1)) ' ' ns(mxc(2)) ' ' ns(mxc(3)) ' : ' htc '\n'];
+    [htc, routs(2)] = hitCheck(lnii.img, gtc5);
+    outputStr = [outputStr '  GTC  >.5 coordinate:         ' ns(gtc5(1)) ' ' ns(gtc5(2)) ' ' ns(gtc5(3)) ' : ' htc '\n'];
+    [htc, routs(3)] = hitCheck(lnii.img, gtc5w);
+    outputStr = [outputStr '  GWTC >.5 coordinate:         ' ns(gtc5w(1)) ' ' ns(gtc5w(2)) ' ' ns(gtc5w(3)) ' : ' htc '\n'];
+    [htc, routs(4)] = hitCheck(lnii.img, gtc3);
+    outputStr = [outputStr '  GTC  >.3 coordinate:         ' ns(gtc3(1)) ' ' ns(gtc3(2)) ' ' ns(gtc3(3)) ' : ' htc '\n'];
+    [htc, routs(5)] = hitCheck(lnii.img, gtc3w);
+    outputStr = [outputStr '  GWTC >.3 coordinate:         ' ns(gtc3w(1)) ' ' ns(gtc3w(2)) ' ' ns(gtc3w(3)) ' : ' htc '\n'];
+    [htc, routs(6)] = hitCheck(lnii.img, gtc1);
+    outputStr = [outputStr '  GTC  >.1 coordinate:         ' ns(gtc1(1)) ' ' ns(gtc1(2)) ' ' ns(gtc1(3)) ' : ' htc '\n'];
+    [htc, routs(7)] = hitCheck(lnii.img, gtc1w);
+    outputStr = [outputStr '  GWTC >.1 coordinate:         ' ns(gtc1w(1)) ' ' ns(gtc1w(2)) ' ' ns(gtc1w(3)) ' : ' htc '\n'];
+    [htc, routs(8)] = hitCheck(lnii.img, gtc0w);
+    outputStr = [outputStr '  GWTC >0  coordinate:         ' ns(gtc0w(1)) ' ' ns(gtc0w(2)) ' ' ns(gtc0w(3)) ' : ' htc '\n'];
+    [htc, routs(9)] = hitCheck(lnii.img, gtac75);
+    outputStr = [outputStr '  GWATC 75%%  coordinate:       ' ns(gtac75(1)) ' ' ns(gtac75(2)) ' ' ns(gtac75(3)) ' : ' htc '\n'];
+    [htc, routs(10)] = hitCheck(lnii.img, gtac50);
+    outputStr = [outputStr '  GWATC 50%%  coordinate:       ' ns(gtac50(1)) ' ' ns(gtac50(2)) ' ' ns(gtac50(3)) ' : ' htc '\n'];
+    [htc, routs(11)] = hitCheck(lnii.img, gtac25);
+    outputStr = [outputStr '  GWATC 25%%  coordinate:       ' ns(gtac25(1)) ' ' ns(gtac25(2)) ' ' ns(gtac25(3)) ' : ' htc '\n'];
+    routs(12) = 1;
+    o = o + routs;
 
     oslice = onii.img(:,:,mxc(3));
     oslice(:,:,2) = oslice(:,:,1);
@@ -199,10 +222,22 @@ for i = 1:length(srcNii)
     
 end
 
+outputStr = [outputStr ' Overall scores: ' '\n'];
+outputStr = [outputStr '       mmmx hit ' ns(o(1)) '/' ns(o(12)) ' [' ns(o(1)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '   GTC  >.5 hit ' ns(o(2)) '/' ns(o(12)) ' [' ns(o(2)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '   GWTC >.5 hit ' ns(o(3)) '/' ns(o(12)) ' [' ns(o(3)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '   GTC  >.3 hit ' ns(o(4)) '/' ns(o(12)) ' [' ns(o(4)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '   GWTC >.3 hit ' ns(o(5)) '/' ns(o(12)) ' [' ns(o(5)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '   GTC  >.1 hit ' ns(o(6)) '/' ns(o(12)) ' [' ns(o(6)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '   GWTC >.1 hit ' ns(o(7)) '/' ns(o(12)) ' [' ns(o(7)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '   GWTC > 0 hit ' ns(o(8)) '/' ns(o(12)) ' [' ns(o(8)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '  GWATC 75%% hit ' ns(o(9)) '/' ns(o(12)) ' [' ns(o(9)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '  GWATC 50%% hit ' ns(o(10)) '/' ns(o(12)) ' [' ns(o(10)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '  GWATC 25%% hit ' ns(o(11)) '/' ns(o(12)) ' [' ns(o(11)/o(12)*100) '%%]' '\n'];
+outputStr = [outputStr '\n'];
+
 fullTime = toc(fullTime)
 cd('D:\Games\MATLAB R2015a\_et files\Masters');
-save etrun.mat times segTimes
-
 cd(origdir)
 disp('  Done.')
 fprintf(outputStr);
@@ -301,14 +336,38 @@ for z = 1:zlim
 end
 s = round(s./sssm(img(~isnan(img))));
 
-function rez = hitCheck(img, coords)
+function s = GWATC(img, threshold)
+idStr = ['GWATC@' ns(threshold) '%'];
+cdisp(idStr);
+threshold = mmmx(img) * threshold / 100;
+img(img<threshold) = NaN;
+[xlim,ylim,zlim] = size(img);
+s = [0 0 0];
+for z = 1:zlim
+    cdisp('\DEL');
+    cdisp([idStr ' z:' ns(z) '/' ns(zlim) ' s=' ns(s(1)) ' ' ns(s(1)) ' ' ns(s(1))]);
+    if allNaNCheck(img(:,:,z)); continue; end;
+    for y = 1:ylim
+        for x = 1:xlim
+            if (~isnan(img(x,y,z)))
+                s = s + ([x y z].*img(x,y,z));
+            end
+        end
+    end
+end
+s = round(s./sssm(img(~isnan(img))));
+
+function [rez,x] = hitCheck(img, coords)
 if sum(isnan(coords))>0
     rez='Got nothing...';
+    x=0;
 else
     if (img(coords(1),coords(2),coords(3)) > 0)
         rez = 'HIT!';
+        x=1;
     else
         rez = 'MISS...';
+        x=0;
     end
 end
 
