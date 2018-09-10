@@ -1,0 +1,10 @@
+1. run nsudo (D:\Soft\NSudo 6.0.1802.2 v2\NSudo.bat):
+2. open powershell with it as trusted installer
+3. run .\killem.bat
+
+or:
+
+disable "Schedule Scan" task:
+schtasks /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Scan" /f
+
+and kill all the tasks in UpdateOrchestrator in similar fashion!
