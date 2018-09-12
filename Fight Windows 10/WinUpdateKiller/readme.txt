@@ -5,6 +5,4 @@ Installation instructions:
 3. 	edit killem.starter.bat and change path in line
 		set "killerRoot=E:\Etc\WinKiller\"
 	to whatever path you ended up with. \ is necessary at the end!
-4.	in Run enter "shell:startup"
-5.	add shortuct to killem.starter.bat to the folder that opened and set it to run as admin
-6.	it should work now. to start manually just run with admin priviliges killem.starter.bat
+4.	run killem.starter.bat as admin and keep cmd cycling till shutdown
